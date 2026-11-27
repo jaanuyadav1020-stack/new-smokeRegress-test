@@ -2,7 +2,7 @@
 /// <reference types="node" />
 
 import { defineConfig, devices } from '@playwright/test';
-
+// 
 export default defineConfig({
   testDir: './tests',
 
@@ -22,6 +22,7 @@ export default defineConfig({
     {
       name: 'chromium',
       use: {
+        baseURL: 'https://restful-booker.herokuapp.com',
         ...devices['Desktop Chrome'],
       },
     },
